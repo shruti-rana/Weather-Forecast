@@ -1,12 +1,12 @@
 # Weather-Forecast
 
-1. A weather forecast provides information about the expected weather conditions.
-2. It tells us the temperature, humidity, wind speed, and chance of rain.
-3. Weather forecasts can be given for today, tomorrow, or the coming days.
-4. They help people plan their daily activities and travel.
-5. Farmers use weather forecasts to plan farming and irrigation activities.
-6. It can warn us about heavy rain, storms, heat waves, or strong winds.
-7. Weather information is collected using satellites, sensors, and weather stations.
-8. Modern technology helps provide faster and more accurate forecasts.
-9. A weather forecast application displays weather information in a simple way.
-10. Overall, weather forecasting helps us stay prepared and make better decisions.
+1. Weather Forecast is a web-based application that provides real-time weather information.
+2. Users can search for weather details by entering a city or location name.
+3. The application displays temperature, humidity, wind speed, and weather conditions.
+4. It uses a weather API to fetch accurate and updated weather data.
+5. The project provides a simple, clean, and user-friendly interface.
+6. Users can easily view the current weather conditions of different locations.
+7. The application is designed to work smoothly on desktop and mobile devices.
+8. JavaScript is used to fetch API data and dynamically update the webpage.
+9. This project demonstrates the practical use of APIs, JSON, DOM manipulation, and responsive design.
+10. The main goal is to provide users with quick and convenient access to weather information.

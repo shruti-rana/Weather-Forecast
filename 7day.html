@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Weather Forecast Dashboard</title>
+  <link rel="stylesheet" href="7day.css" />
+</head>
+<body class="light-theme">
+  <aside class="sidebar">
+    <div class="logo">🌦️ Weather Forecast</div>
+    <nav>
+      <a href="#" class="sidebar-link active" data-section="dashboardSection">Dashboard</a>
+      <a href="#" class="sidebar-link" data-section="aboutSection">About Us</a>
+      <a href="#" class="sidebar-link" data-section="notificationsSection">Notifications</a>
+      <a href="http://localhost/weather/logout.php" class="btn btn-warning mt-4">Logout</a>
+    </nav>
+    <!--<button class="logout">Log Out</button>-->
+  </aside>
+  <main>
+    <!-- Dashboard Section -->
+    <section id="dashboardSection" class="content-section">
+      <header>
+        <div>
+          <input type="text" id="search" placeholder="Search location..." autocomplete="off" aria-autocomplete="list" aria-haspopup="true" aria-controls="suggestionsList" />
+          <ul id="suggestionsList" class="suggestions-list" role="listbox" aria-label="City suggestions"></ul>
+          <button id="themeToggleBtn" title="Toggle Light/Dark Mode">☀️</button>
+        </div>
+      </header>
+      <section class="weather-main">
+        <div class="city-temp">
+          <h2 id="city">Gotham</h2>
+          <p id="datetime">
+            <span class="dayname"></span>
+            <span class="date"></span>
+            <span class="time"></span>
+          </p>
+          <div class="temp">
+            <img id="weatherIcon" src="" alt="Weather Icon" />
+            <span id="temperature">--°</span>
+            <span class="desc" id="desc"></span>
+          </div>
+          <div class="details">
+            <span id="pressure"></span>
+            <span id="dewPoint"></span>
+            <span id="humidity"></span>
+            <span id="wind"></span>
+          </div>
+        </div>
+        <div class="temp-chart">
+          <canvas id="tempChart" width="260" height="110"></canvas>
+        </div>
+      </section>
+      <section class="weather-details">
+        <div class="detail-card">
+          <h3>Rain Chance</h3>
+          <p id="rainChance"></p>
+        </div>
+        <div class="detail-card">
+          <h3>Wind Speed</h3>
+          <p id="windSpeed"></p>
+        </div>
+        <div class="detail-card">
+          <h3>Pressure</h3>
+          <p id="pressureCard"></p>
+        </div>
+      </section>
+      <section class="weather-week">
+        <h3>This Week</h3>
+        <div class="week-days" id="weekDays"></div>
+      </section>
+    </section>
+
+    <!-- Calendar Section -->
+    <section id="calendarSection" class="content-section" style="display:none;">
+      <div class="calendar-section">
+        <div class="calendar-header">
+          <button id="prevMonthBtn">&#8592;</button>
+          <span id="calendarMonth"></span>
+          <button id="nextMonthBtn">&#8594;</button>
+        </div>
+        <table class="calendar-table">
+          <thead><tr id="calendarDaysHeader"></tr></thead>
+          <tbody id="calendarBody"></tbody>
+        </table>
+      </div>
+    </section>
+    <section id="aboutSection" class="content-section" style="display:none;">
+  <div class="about-content" style="padding: 20px; max-width: 600px;">
+    <h2>About Us</h2>
+    <p>Welcome to the Weather Forecast Dashboard. We provide accurate and timely weather data sourced from WeatherAPI to help you plan your days better. Our team is dedicated to delivering a user-friendly experience with real-time updates and advanced weather insights.</p>
+    <p>© 2025 Weather Forecast Team. All rights reserved.</p>
+  </div>
+</section>
+<section id="notificationsSection" class="content-section" style="display:none;">
+  <div class="notifications-content" style="padding: 20px; max-width: 700px;">
+    <h2>Notifications</h2>
+    <div id="weatherAlerts">
+      <h3>Weather Alerts</h3>
+      <p>No active alerts.</p>
+    </div>
+    <div id="dailySummary" style="margin-top: 20px;">
+      <h3>Daily Forecast Summary</h3>
+      <p>Loading daily summary...</p>
+    </div>
+  </div>
+
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="7day.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>WeatherNow</title>
+<link rel="stylesheet" href="weather.css" />
+</head>
+<body>
+<div class="container">
+ <header>
+   <h1>WeatherNow</h1>
+   <div class="search-wrapper">
+    <input
+     type="text"
+     id="searchInput"
+     placeholder="Search city "
+     autocomplete="off"
+    />
+    <button id="searchBtn">Search</button>
+    <div id="suggestions" class="suggestions-list"></div>
+   </div>
+  </header>
+  <main>
+   <div class="main-section">
+    <div class="city" id="cityName">New York</div>
+    <div class="weather-icon" id="weatherIcon">🌤️</div>
+    <div class="temperature" id="temperature">20°C</div>
+    <div class="description" id="description">Partly Cloudy</div>
+    <div class="datetime" id="datetime">08:30 AM, Wednesday 1 December 2021</div>
+   </div>
+   <div class="details-section">
+    <div id="humidity">Humidity: 55%</div>
+    <div id="wind">Wind speed: 10 km/h</div>
+    <div id="precipitation">Precipitation: 20%</div>
+   </div>
+   <div class="forecast-section" id="forecast"></div>
+  </main>
+  <footer>
+   <p>Powered by WeatherAPI</p>
+   <a href="http://localhost/weather/register.php">register</a> | <a href="http://localhost/weather/login.php">login</a>
+  </footer>
+ </div>
+ <script src="weather.js"></script>
+</body>
+</html> 
